@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Silkscreen', sans-serif;
+    font-size: 1.1em;
+    background-color: #F9B9B7;
+}
+
+#jogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+}
+
+#comer {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+#carinho {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+#nivelcarinho {
+    color: red;
+}
+
+#estatisticas {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+#nivelfome, #nivelcarinho, #nivelbrincar {
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000;
+}
+
+#atividades {
+    text-align: center;
+    max-width: 500px;
+}
+
+button {
+    height: 50px;
+    font-size: 1em;
+    background-color: #F5D491;
+    font-family: 'Silkscreen', sans-serif;
+    color: #1b1b1b;
+}
+
+button:first-child {
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #eec26c;
+}
+
+#pedra-papel-tesoura {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+
+#pedra, #papel, #tesoura:hover {
+    cursor: pointer;
+}
+
+#PPT-maquina {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.balanco-usuario {
+    animation: balanco-usuario 0.5s ease-in-out infinite;
+}
+
+p {
+    color: #1b1b1b;
+}
+
+figure {
+    color: #1b1b1b;
+}
+
+@keyframes balanco-usuario {
+    0%, 100% {
+        transform: translate(-50%, 0%);
+    }
+    50% {
+        transform: translate(-40%, 0%);
+    }
+}
+
+.balanco-maquina {
+    animation: balanco-maquina 0.5s ease-in-out infinite;
+}
+
+@keyframes balanco-maquina {
+    0%, 100% { 
+        transform: translate(0%, 0%) scaleY(-1);
+    }
+    50% {
+        transform: translate(10%, 0%) scaleY(-1);
+    }
+}
+
+#escolher-bichinho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F06C9B;
+}
+
+.bichinho-opcao {
+    display: inline-block;
+    width: 100px;
+    padding: 0px 10px;
+    font-size: 2em;
+}
+
+#popup {
+    display: none;
+}
+
+#bichinhos-opcoes {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#escolher-bichinho  p {
+    font-size: 1.8em;
+}
+
+#ione-figure {
+    border: 3px solid #eb4c4c;
+    background-color: #f82c2c;
+}
+
+#ione-figure:hover {
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    scale: 1.1;  
+}
+
+#guibo-figure {
+    border: 3px solid #47a6e6;
+    background-color: #248fd6;
+}
+
+#guibo-figure:hover {
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    scale: 1.1;
+}
+
+#stella-figure {
+    border: 3px solid #c5a11d;
+    background-color: #f1c524;
+}
+
+#stella-figure:hover {
+    cursor: pointer;
+    color: white;
+    border: 3px solid white;
+    scale: 1.1;
+}
+
+.pulando {
+
+    animation: saltitar 0.2s infinite alternate;
+}
+
+@keyframes saltitar {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #container {
+        width: 350px;
+        height: 350px;
+    }
+
+    #pedra, #papel, #tesoura {
+        width: 31%;
+    }
+
+    #imagem-mao-usuario {
+        width: 28%;
+    }
+
+    #imagem-mao-maquina {
+        width: 98px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #container {
+        width: 300px;
+        height: 300px;
+    }
+
+    #imagem-mao-maquina {
+        width: 84px;
+    }
+
+    #estatisticas {
+        font-size: 0.9em;
+    }
+}

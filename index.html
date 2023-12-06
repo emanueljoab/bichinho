@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bichinho Virtual</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Ione, Guibo e Stella querem ser adotados!">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="jogo">
+        <div id="container">
+            <div id="popup">
+                <div id="escolher-bichinho">
+                    <p>Adote um bichinho</p>
+                    <div id="bichinhos-opcoes">
+                        <figure id="ione-figure">
+                            <img src="ione-neutro.png" alt="Ione" class="bichinho-opcao" id="ione">
+                            <figcaption>Ione</figcaption>
+                        </figure>
+                        <figure id="guibo-figure">
+                            <img src="guibo-neutro.png" alt="Guibo" class="bichinho-opcao" id="guibo">
+                            <figcaption>Guibo</figcaption>
+                        </figure>
+                        <figure id="stella-figure">
+                            <img src="stella-neutro.png" alt="Stella" class="bichinho-opcao" id="stella">
+                            <figcaption>Stella</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>  
+            <img src="" alt="" id="bicho">
+            <img src="" alt="" id="carinho">
+            <img src="" alt="" id="comer">
+            <div id="PPT-usuario">
+            </div>
+            <div id="pedra-papel-tesoura">
+                <img src="pedra.png" alt="" id="pedra">
+                <img src="papel.png" alt="" id="papel">
+                <img src="tesoura.png" alt="" id="tesoura">
+            </div>
+            <div id="PPT-maquina">
+            </div>
+        </div>
+        <div id="estatisticas">
+            <p>Fominha: <span id="nivelfome"></span></p>
+            <p>Carinho: <span id="nivelcarinho"></span></p>
+            <p>Brincar: <span id="nivelbrincar"></span></p>
+        </div>      
+        <div id="atividades">
+            <button onclick="alimentar()">Alimentar</button>
+            <button onclick="fazerCarinho()">Fazer carinho</button>
+            <button onclick="brincar()">Brincar</button>
+            <button onclick="abandonar(this)">Abandonar</button>
+        </div>
+    </div>
+</body>
+</html>
