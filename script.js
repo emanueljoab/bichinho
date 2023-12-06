@@ -202,6 +202,10 @@ function brincar() {
                 imagemMaoMaquina.style.transform = 'scaleY(-1)';
                 document.getElementById('PPT-maquina').appendChild(imagemMaoMaquina);
 
+                setTimeout(function () {
+                    document.getElementById('PPT-maquina').removeChild(imagemMaoMaquina);
+                }, 2500);
+
                 if (resultado === "Usuário venceu!") {
                     imagemMaoUsuario.classList.add('balanco-usuario');
                 } else if (resultado === "Máquina venceu!") {
